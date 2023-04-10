@@ -12,6 +12,9 @@
     @apply w-[90%] max-w-[1500px] flex;
   }
 }
+body {
+  background-color: black;
+}
 
 .area {
   grid-template-areas: "sidebar main";
@@ -21,4 +24,15 @@
 }
 .main {
   grid-area: main;
+}
+.topbar {
+  grid-area: topbar;
+}
+
+@media screen and (max-width: 1024px) {
+  .area {
+    grid-template-areas:
+      "topbar "
+      "main ";
+  }
 }
