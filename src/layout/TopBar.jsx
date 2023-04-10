@@ -2,7 +2,7 @@ const TopBar = ({ setSidebarToggle }) => {
   return (
     <div className="bg-secondary  py-3   topbar lg:hidden flex justify-center items-center w-full">
       <div className=" justify-between items-center flex w-[90%]">
-        <img src="/logo.png" className="w-[50px]" alt="" />
+        <img src="/logo.png" className="w-[100px]" alt="" />
         <svg
           onClick={() => setSidebarToggle(true)}
           xmlns="http://www.w3.org/2000/svg"

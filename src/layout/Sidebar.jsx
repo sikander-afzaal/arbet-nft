@@ -35,7 +35,7 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
         <div className="w-full border-b-2 border-solid border-white border-opacity-30 pb-4 flex justify-start  items-center flex-col gap-4">
           <img
             src="/logo.png"
-            className="w-full aspect-square object-contain max-w-[112px]"
+            className="w-full aspect-square object-contain max-w-[132px]"
             alt=""
           />
           <div className="flex justify-start items-center flex-col w-full gap-3">
