@@ -1,6 +1,6 @@
 const TopBar = ({ setSidebarToggle }) => {
   return (
-    <div className="bg-white bg-opacity-80 py-3   topbar lg:hidden flex justify-center items-center w-full">
+    <div className="bg-secondary  py-3   topbar lg:hidden flex justify-center items-center w-full">
       <div className=" justify-between items-center flex w-[90%]">
         <img src="/logo.png" className="w-[50px]" alt="" />
         <svg
@@ -9,7 +9,7 @@ const TopBar = ({ setSidebarToggle }) => {
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
-          stroke="black"
+          stroke="white"
           className="w-8 h-8 cursor-pointer"
         >
           <path

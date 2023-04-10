@@ -11,9 +11,9 @@
   .contain {
     @apply w-[90%] max-w-[1500px] flex;
   }
-}
-body {
-  background-color: black;
+  body {
+    @apply bg-primary;
+  }
 }
 
 .area {
@@ -38,11 +38,12 @@ body {
   height: 20px;
   padding: 3px;
   opacity: 1;
-  background-color: rgba(128, 128, 128, 0.468);
+  background-color: black;
 }
 .splide__arrow svg {
   width: 100%;
   height: 100%;
+  fill: white;
 }
 .splide__arrow--prev {
   left: -25px;
@@ -53,7 +54,7 @@ body {
 .rc-slider {
   border-radius: 100vh;
   height: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 .rc-slider-rail {
   background-color: gray;
@@ -71,11 +72,12 @@ body {
   top: -5px;
   opacity: 1;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgb(145, 158, 171);
   border: none;
 }
 .rc-slider-mark {
-  top: 100%;
+  top: initial;
+  bottom: 10px;
 }
 .rc-slider-mark span {
   color: white;

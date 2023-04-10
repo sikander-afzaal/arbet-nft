@@ -7,6 +7,11 @@ export default {
       fontFamily: {
         sans: ["Jost", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        primary: "rgb(22, 28, 36)",
+        secondary: "rgb(33, 43, 54)",
+        gray: "rgb(145, 158, 171)",
+      },
     },
   },
   plugins: [],

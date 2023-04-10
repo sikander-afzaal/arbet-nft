@@ -14,7 +14,7 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
       <div
         className={`sidebar  border-r-2 border-solid border-white fixed  lg:sticky top-0 ${
           sidebarToggle ? "left-0" : "lg:left-0 -left-full"
-        } h-screen max-h-screen overflow-y-auto py-4 transition-all duration-700 wrapper px-5 bg-black max-w-[350px] lg:max-w-none z-[70]`}
+        } h-screen max-h-screen overflow-y-auto py-4 transition-all duration-700 wrapper px-5 bg-primary max-w-[350px] lg:max-w-none z-[70]`}
       >
         <svg
           onClick={() => setSidebarToggle(false)}
