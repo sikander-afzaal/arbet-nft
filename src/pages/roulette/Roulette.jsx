@@ -64,7 +64,7 @@ const Roulette = () => {
                 <img src="/usdt.png" className="w-4 object-contain" alt="" />
               </div>
             </div>
-            <button className="text-white bg-secondary w-full py-3 border-2 border-solid border-secondary hover:bg-transparent hover:text-black text-lg mt-5 rounded-xl font-semibold transition-all duration-300">
+            <button className="text-white  bg-secondary w-full py-3 border-2 border-solid border-secondary hover:bg-transparent  text-lg mt-5 rounded-xl font-semibold transition-all duration-300">
               Spin Now
             </button>
             <div className=" flex mt-3 justify-between items-center w-full">

@@ -115,14 +115,14 @@ const Dice = () => {
                       setDropDown({
                         toggle: false,
                         details: {
-                          name: "Arbet",
+                          name: "CARB",
                           ico: "logo.png",
                         },
                       });
                     }}
                     className="w-full h-[38px] flex justify-between items-center px-3 hover:bg-white hover:text-black transition-all duration-300 text-white text-sm font-medium"
                   >
-                    Arbet
+                    CARB
                   </button>
                   <button
                     onClick={() => {
@@ -149,21 +149,21 @@ const Dice = () => {
               50% win chance 3.5% house edge
             </p>
             <p className="text-white text-sm font-semibold">
-              Target payout: -0 Arbet
+              Target payout: -0 CARB
             </p>
           </div>
           <div className="sm:flex-row flex-col flex justify-between items-start sm:items-center w-full gap-2 max-w-[800px]">
             <p className="text-white text-sm font-semibold">
-              Bank: 880, 788, 4194 Arbet
+              Bank: 880, 788, 4194 CARB
             </p>
             <p className="text-white text-sm font-semibold">
-              Min bet amount: 200 Arbet
+              Min bet amount: 200 CARB
             </p>
           </div>
           <div className="sm:flex-row flex-col flex justify-between items-start sm:items-center w-full gap-2 max-w-[800px]">
             <p className="text-white text-sm font-semibold"></p>
             <p className="text-white text-sm font-semibold">
-              Max payout: 17.615.7684 Arbet
+              Max payout: 17.615.7684 CARB
             </p>
           </div>
         </div>

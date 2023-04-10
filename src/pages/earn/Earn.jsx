@@ -7,7 +7,7 @@ const Earn = () => {
           <p className="text-white mt-1">
             Stake{" "}
             <a href="#" target="blank" className="underline">
-              Arbet
+              CARB
             </a>{" "}
             to earn rewards.
           </p>
@@ -16,7 +16,7 @@ const Earn = () => {
           <div className="flex  justify-start items-start flex-col  w-full rounded-xl overflow-hidden">
             <div className="flex justify-start items-center gap-3 px-5 py-4 bg-gray w-full bg-opacity-30">
               <img src="/logo.png" className="object-contain w-[32px]" alt="" />
-              <p className="text-white font-semibold uppercase">ARBET</p>
+              <p className="text-white font-semibold uppercase">CARB</p>
             </div>
             <div className="w-full bg-secondary p-5 flex justify-start items-start flex-col gap-2">
               <div className="flex justify-between items-center w-full">
@@ -24,14 +24,12 @@ const Earn = () => {
                 <p className="text-sm font-semibold text-white">$1.3300</p>
               </div>
               <div className="flex justify-between items-center w-full">
-                <p className="text-sm font-semibold text-white">
-                  Arbet Balance
-                </p>
+                <p className="text-sm font-semibold text-white">CARB Balance</p>
                 <p className="text-sm font-semibold text-white">35168.19</p>
               </div>
               <div className="flex justify-between items-center w-full border-b border-solid border-white pb-3">
                 <p className="text-sm font-semibold text-white">
-                  sArbet Balance
+                  sCARB Balance
                 </p>
                 <p className="text-sm font-semibold text-white">324324</p>
               </div>
@@ -45,7 +43,7 @@ const Earn = () => {
               </div>
               <div className="flex flex-wrap justify-start mt-3 pb-1 items-center gap-3">
                 <button className="bg-gray bg-opacity-20 text-white rounded-lg px-4 py-1 text-base font-semibold">
-                  Buy Arbet
+                  Buy CARB
                 </button>
                 <button className="bg-gray bg-opacity-20 text-white rounded-lg px-4 py-1 text-base font-semibold">
                   Stake
@@ -104,8 +102,8 @@ const Earn = () => {
         </div>
         <div className="flex justify-start items-start flex-col bg-secondary rounded-lg p-4">
           <p className="text-sm font-semibold text-white">
-            This interface is a free interface for using the Arbet Protocol. The
-            Arbet Protocol and this interface is not available to residents,
+            This interface is a free interface for using the CARB Protocol. The
+            CARB Protocol and this interface is not available to residents,
             citizens, or agents of: the United States, Iran, Cuba, North Korea,
             Syria, Myanmar (Burma), Sudan, Liberia, or the regions of Crimea,
             Donetsk, or Luhansk. By continuing to use this interface, you
@@ -113,11 +111,11 @@ const Earn = () => {
             accessing this interface from within the United States.
           </p>
           <p className="text-sm font-semibold text-white">
-            This free interface is maintained by the Arbet community and does
-            not receive a cut of house profits. Use this app at your own risk.
-            Arbet is a decentralized protocol and the maintainers of this
-            interface are not responsible for any losses or damages incurred by
-            using this interface.
+            This free interface is maintained by the CARB community and does not
+            receive a cut of house profits. Use this app at your own risk. CARB
+            is a decentralized protocol and the maintainers of this interface
+            are not responsible for any losses or damages incurred by using this
+            interface.
           </p>
         </div>
       </div>
