@@ -86,7 +86,11 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
             }
             name="Home Page"
           />
-          <Link className="w-full" to="/">
+          <Link
+            onClick={() => setSidebarToggle(false)}
+            className="w-full"
+            to="/"
+          >
             <SidebarLink
               ico={
                 <svg
@@ -154,12 +158,17 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
             />
             {gamesDropToggle && (
               <div className="flex w-full gap-2 justify-start items-start flex-col ">
-                <div className="flex justify-start group items-center w-full py-2.5 px-6 hover:bg-white rounded-lg transition-all duration-300">
+                <Link
+                  to="/roulette"
+                  onClick={() => setSidebarToggle(false)}
+                  className="flex justify-start group items-center w-full py-2.5 px-6 hover:bg-white rounded-lg transition-all duration-300"
+                >
                   <p className="text-white group-hover:text-black transition-all duration-300 font-semibold text-sm">
                     Roulette
                   </p>
-                </div>
+                </Link>
                 <Link
+                  onClick={() => setSidebarToggle(false)}
                   to="/dice"
                   className="flex justify-start group items-center w-full py-2.5 px-6 hover:bg-white rounded-lg transition-all duration-300"
                 >
