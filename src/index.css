@@ -28,7 +28,60 @@ body {
 .topbar {
   grid-area: topbar;
 }
-
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.splide__arrow {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  opacity: 1;
+  background-color: rgba(128, 128, 128, 0.468);
+}
+.splide__arrow svg {
+  width: 100%;
+  height: 100%;
+}
+.splide__arrow--prev {
+  left: -25px;
+}
+.splide__arrow--next {
+  right: -25px;
+}
+.rc-slider {
+  border-radius: 100vh;
+  height: 20px;
+  padding-bottom: 30px;
+}
+.rc-slider-rail {
+  background-color: gray;
+  height: 20px;
+  border-radius: 100vh;
+  top: 0;
+}
+.rc-slider-step {
+  display: none;
+}
+.rc-slider-handle {
+  width: 30px;
+  height: 30px;
+  margin-top: 0;
+  top: -5px;
+  opacity: 1;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+}
+.rc-slider-mark {
+  top: 100%;
+}
+.rc-slider-mark span {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
 @media screen and (max-width: 1024px) {
   .area {
     grid-template-areas:

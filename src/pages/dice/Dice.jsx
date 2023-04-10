@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import useOutsideClick from "../../hooks/useOutsideClick";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 
 const Dice = () => {
   const dropRef = useRef();
@@ -13,12 +15,31 @@ const Dice = () => {
   useOutsideClick(dropRef, () =>
     setDropDown((prev) => ({ toggle: false, ...prev }))
   );
+  const marks = {
+    4: 4,
+    25: "25",
+    50: "50",
+    75: "75",
+    99: "99",
+  };
+  const [sliderVal, setSliderVal] = useState(false);
   return (
     <div className="wrapper pt-5 lg:pt-16 pb-8 ">
       <div className="contain flex-col justify-start gap-5 items-center">
         <h2 className="text-white text-6xl sm:text-8xl font-semibold">
           23.94x
         </h2>
+        <div className="w-full mb-5 max-w-[800px] p-4 bg-black rounded-xl">
+          <Slider
+            min={0}
+            max={100}
+            marks={marks}
+            trackStyle={{ background: "blue", height: "20px", top: 0 }}
+            value={sliderVal}
+            onChange={(val) => setSliderVal(val)}
+            draggableTrack
+          />
+        </div>
         <div className="sm:flex-row flex-col px-5 sm:px-14 sm:py-0 py-5 rounded-2xl bg-white sm:h-[80px] w-full max-w-[800px] flex justify-center items-center sm:gap-0 gap-5">
           <p className="text-black border-none sm:border-r-2 h-full flex items-center sm:border-solid border-black px-4 text-2xl sm:text-lg font-medium">
             BET
