@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
   const [gamesDropToggle, setGamesDropToggle] = useState(false);
@@ -67,7 +67,7 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
           <SidebarLink
             ico={
               <svg
-                className="group-hover:text-black text-white transition-all duration-300"
+                className=" text-white transition-all duration-300"
                 width="25"
                 height="17"
                 viewBox="0 0 25 17"
@@ -92,9 +92,10 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
             to="/"
           >
             <SidebarLink
+              url="/"
               ico={
                 <svg
-                  className="group-hover:text-black text-white transition-all duration-300"
+                  className=" text-white transition-all duration-300"
                   width="22"
                   height="23"
                   viewBox="0 0 22 23"
@@ -126,7 +127,7 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
             <SidebarLink
               ico={
                 <svg
-                  className="group-hover:text-black text-white transition-all duration-300"
+                  className=" text-white transition-all duration-300"
                   width="22"
                   height="23"
                   viewBox="0 0 22 23"
@@ -158,24 +159,38 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
             />
             {gamesDropToggle && (
               <div className="flex w-full gap-2 justify-start items-start flex-col ">
-                <Link
+                <NavLink
+                  end
                   to="/roulette"
                   onClick={() => setSidebarToggle(false)}
-                  className="flex justify-start group items-center w-full py-2.5 px-6 hover:bg-white rounded-lg transition-all duration-300"
+                  className={({ isActive }) =>
+                    `${
+                      isActive
+                        ? "text-black bg-white"
+                        : "text-white bg-transparent"
+                    } flex justify-start  group items-center w-full py-2.5 px-6 hover:bg-white rounded-lg transition-all duration-300`
+                  }
                 >
-                  <p className="text-white group-hover:text-black transition-all duration-300 font-semibold text-sm">
+                  <p className="text-inherit group-hover:text-black transition-all duration-300 font-semibold text-sm">
                     Roulette
                   </p>
-                </Link>
-                <Link
-                  onClick={() => setSidebarToggle(false)}
+                </NavLink>
+                <NavLink
+                  end
                   to="/dice"
-                  className="flex justify-start group items-center w-full py-2.5 px-6 hover:bg-white rounded-lg transition-all duration-300"
+                  onClick={() => setSidebarToggle(false)}
+                  className={({ isActive }) =>
+                    `${
+                      isActive
+                        ? "text-black bg-white"
+                        : "text-white bg-transparent"
+                    } flex justify-start  group items-center w-full py-2.5 px-6  hover:bg-white rounded-lg transition-all duration-300`
+                  }
                 >
-                  <p className="text-white group-hover:text-black transition-all duration-300 font-semibold text-sm">
+                  <p className="text-inherit group-hover:text-black transition-all duration-300 font-semibold text-sm">
                     Dice
                   </p>
-                </Link>
+                </NavLink>
               </div>
             )}
           </div>
@@ -228,17 +243,38 @@ const SidebarLink = ({
   setGamesDropToggle,
   arrow,
   gamesDropToggle,
+  url,
 }) => {
+  const { pathname } = useLocation();
+  const [activeLink, setActiveLink] = useState(false);
+  useEffect(() => {
+    if (url === pathname) {
+      setActiveLink(true);
+    } else {
+      setActiveLink(false);
+    }
+  }, [pathname]);
+
   return (
     <button
       onClick={() => {
         setGamesDropToggle((prev) => !prev);
       }}
-      className="flex justify-between text-white hover:text-black gap-3 hover:bg-white items-center px-4 w-full py-3 group rounded-lg transition-all duration-200"
+      className={`flex justify-between  hover:text-black gap-3 hover:bg-white items-center px-4 w-full py-3 group rounded-lg transition-all duration-200 ${
+        activeLink ? "bg-white text-black" : "text-white bg-transparent"
+      }`}
     >
       <div className="flex justify-start items-center gap-3">
-        {ico}
-        <p className="text-white group-hover:text-black transition-all duration-300 font-semibold text-sm">
+        <div
+          className={`${activeLink ? "invert" : "invert-0"} group-hover:invert`}
+        >
+          {ico}
+        </div>
+        <p
+          className={`${
+            activeLink ? "text-black" : "text-white"
+          } group-hover:text-black transition-all duration-300 font-semibold text-sm`}
+        >
           {name}
         </p>
       </div>
