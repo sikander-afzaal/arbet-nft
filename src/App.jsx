@@ -4,6 +4,7 @@ import Earn from "./pages/earn/Earn";
 import TopBar from "./layout/TopBar";
 import { useState } from "react";
 import Dice from "./pages/dice/Dice";
+import Roulette from "./pages/roulette/Roulette";
 
 const App = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false);
@@ -18,6 +19,7 @@ const App = () => {
         <Routes>
           <Route element={<Earn />} path="/" />
           <Route element={<Dice />} path="/dice" />
+          <Route element={<Roulette />} path="/roulette" />
         </Routes>
       </div>
     </div>
