@@ -15,11 +15,7 @@ const Earn = () => {
         <div className="grid mt-2 sm:mt-8 items-start grid-cols-1 sm:grid-cols-2 w-full gap-5 sm:gap-10">
           <div className="flex  justify-start items-start flex-col  w-full rounded-xl overflow-hidden">
             <div className="flex justify-start items-center gap-3 px-5 py-4 bg-gray w-full bg-opacity-30">
-              <img
-                src="/logo.png"
-                className="object-cover w-[32px] aspect-square"
-                alt=""
-              />
+              <img src="/logo.png" className="object-contain h-[32px]" alt="" />
               <p className="text-white font-semibold uppercase">CARB</p>
             </div>
             <div className="w-full bg-secondary p-5 flex justify-start items-start flex-col gap-2">
