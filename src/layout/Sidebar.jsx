@@ -227,9 +227,17 @@ const Sidebar = ({ setSidebarToggle, sidebarToggle }) => {
         >
           Additional Information
         </a>
-        <a href="#" target="blank" className="text-white w-full font-bold mb-1">
-          Twitter
-        </a>
+        <div className="flex justify-start w-full items-center gap-3">
+          <a href="https://twitter.com/Casino_ARB" target="blank">
+            <img src="/twitter.svg" className="w-6" alt="" />
+          </a>
+          <a href="https://t.me/Carb_Portal" target="blank">
+            <img src="/telegram.svg" className="w-6" alt="" />
+          </a>
+          <a href="https://carbprotocol.com/" target="blank">
+            <img src="/globe.svg" className="w-6" alt="" />
+          </a>
+        </div>
       </div>
     </>
   );
